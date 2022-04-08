@@ -9,12 +9,16 @@ namespace PrvaMVC.Controllers
     public class HelloWorldController : Controller
     {
         // GET: HelloWorld
-        public string Index()
+        public ActionResult Index()
         {
-            return "Pozdravljen MVC";
+
+            return View();
+
         }
-        public string Pozdravljen(string ime, int st=1) {
-            return "pozdravljen " + ime + " ti bosne " + " kolikokrat " + st;
+        public ActionResult Pozdravljen(string ime, int st=3) {
+            ViewBag.Message = "Pozdravljen " + ime;
+            ViewBag.Num = st;
+            return View();
         }
     }
 }

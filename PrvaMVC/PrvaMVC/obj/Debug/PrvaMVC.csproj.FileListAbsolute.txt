@@ -77,3 +77,7 @@ D:\RPA22\PrvaMVC\PrvaMVC\obj\Debug\PrvaMVC.csproj.CoreCompileInputs.cache
 D:\RPA22\PrvaMVC\PrvaMVC\obj\Debug\PrvaMVC.csproj.CopyComplete
 D:\RPA22\PrvaMVC\PrvaMVC\obj\Debug\PrvaMVC.dll
 D:\RPA22\PrvaMVC\PrvaMVC\obj\Debug\PrvaMVC.pdb
+D:\RPA22\PrvaMVC\PrvaMVC\bin\EntityFramework.dll
+D:\RPA22\PrvaMVC\PrvaMVC\bin\EntityFramework.SqlServer.dll
+D:\RPA22\PrvaMVC\PrvaMVC\bin\EntityFramework.xml
+D:\RPA22\PrvaMVC\PrvaMVC\bin\EntityFramework.SqlServer.xml
