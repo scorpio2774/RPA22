@@ -144,6 +144,7 @@
     <Compile Include="Controllers\DijakController.cs" />
     <Compile Include="Controllers\DijakPodrocjeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlanDejavnostisController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -255,6 +256,11 @@
     <Content Include="Views\DijakPodrocje\Details.cshtml" />
     <Content Include="Views\DijakPodrocje\Edit.cshtml" />
     <Content Include="Views\DijakPodrocje\Index.cshtml" />
+    <Content Include="Views\PlanDejavnostis\Create.cshtml" />
+    <Content Include="Views\PlanDejavnostis\Delete.cshtml" />
+    <Content Include="Views\PlanDejavnostis\Details.cshtml" />
+    <Content Include="Views\PlanDejavnostis\Edit.cshtml" />
+    <Content Include="Views\PlanDejavnostis\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,64 @@
+﻿@model Seminarska.Models.PlanDejavnosti
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PlanDejavnosti</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaOpis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaOpis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaŠtDijakov)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaŠtDijakov)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaCilji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaCilji)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaTrajanje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaTrajanje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Področja.PodIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Področja.PodIme)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

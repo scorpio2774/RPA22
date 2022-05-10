@@ -1,0 +1,58 @@
+﻿@model Seminarska.Models.PlanDejavnosti
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PlanDejavnosti</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaOpis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaOpis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaŠtDijakov)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaŠtDijakov)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaCilji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaCilji)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlaTrajanje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlaTrajanje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Področja.PodIme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Področja.PodIme)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

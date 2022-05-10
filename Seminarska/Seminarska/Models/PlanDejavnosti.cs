@@ -11,7 +11,8 @@ namespace Seminarska.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class PlanDejavnosti
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,10 +23,16 @@ namespace Seminarska.Models
         }
     
         public int PlaId { get; set; }
+        [Display(Name = "Opis")]
+
         public string PlaOpis { get; set; }
+        [Display(Name = "Število dijakov")]
         public Nullable<int> PlaŠtDijakov { get; set; }
+        [Display(Name = "Cilji")]
         public string PlaCilji { get; set; }
+        [Display(Name = "Trajanje")]
         public string PlaTrajanje { get; set; }
+        [Display(Name = "Področje")]
         public Nullable<int> PlaPodročje { get; set; }
     
         public virtual Področja Področja { get; set; }
