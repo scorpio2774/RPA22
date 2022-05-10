@@ -1,0 +1,11 @@
+D:\RPA22\VajaKlic\VajaKlic\obj\Debug\VajaKlic.csproj.CoreCompileInputs.cache
+D:\RPA22\VajaKlic\VajaKlic\bin\Debug\VajaKlic.exe.config
+D:\RPA22\VajaKlic\VajaKlic\bin\Debug\VajaKlic.exe
+D:\RPA22\VajaKlic\VajaKlic\bin\Debug\VajaKlic.pdb
+D:\RPA22\VajaKlic\VajaKlic\bin\Debug\Newtonsoft.Json.dll
+D:\RPA22\VajaKlic\VajaKlic\bin\Debug\System.Net.Http.Formatting.dll
+D:\RPA22\VajaKlic\VajaKlic\bin\Debug\Newtonsoft.Json.xml
+D:\RPA22\VajaKlic\VajaKlic\bin\Debug\System.Net.Http.Formatting.xml
+D:\RPA22\VajaKlic\VajaKlic\obj\Debug\VajaKlic.csproj.CopyComplete
+D:\RPA22\VajaKlic\VajaKlic\obj\Debug\VajaKlic.exe
+D:\RPA22\VajaKlic\VajaKlic\obj\Debug\VajaKlic.pdb

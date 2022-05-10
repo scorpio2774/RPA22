@@ -1,0 +1,12 @@
+D:\RPA22\KlicAPI\KlicAPI\bin\Debug\KlicAPI.exe.config
+D:\RPA22\KlicAPI\KlicAPI\bin\Debug\KlicAPI.exe
+D:\RPA22\KlicAPI\KlicAPI\bin\Debug\KlicAPI.pdb
+D:\RPA22\KlicAPI\KlicAPI\bin\Debug\Newtonsoft.Json.dll
+D:\RPA22\KlicAPI\KlicAPI\bin\Debug\System.Net.Http.Formatting.dll
+D:\RPA22\KlicAPI\KlicAPI\bin\Debug\Newtonsoft.Json.xml
+D:\RPA22\KlicAPI\KlicAPI\bin\Debug\System.Net.Http.Formatting.xml
+D:\RPA22\KlicAPI\KlicAPI\obj\Debug\KlicAPI.csproj.AssemblyReference.cache
+D:\RPA22\KlicAPI\KlicAPI\obj\Debug\KlicAPI.csproj.CoreCompileInputs.cache
+D:\RPA22\KlicAPI\KlicAPI\obj\Debug\KlicAPI.csproj.CopyComplete
+D:\RPA22\KlicAPI\KlicAPI\obj\Debug\KlicAPI.exe
+D:\RPA22\KlicAPI\KlicAPI\obj\Debug\KlicAPI.pdb
