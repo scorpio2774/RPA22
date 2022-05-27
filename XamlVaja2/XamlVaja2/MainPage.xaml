@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="XamlVaja2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamlVaja2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <!--<StackPanel Padding="10">
+            <TextBlock FontSize="48pt">Lorem Ipsum</TextBlock>
+            <StackPanel Orientation="Horizontal" Padding="10">
+                <TextBlock Width="250px" TextWrapping="Wrap" HorizontalAlignment="Left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo nisi, consequat eu mi at, commodo maximus purus. Aenean lobortis et turpis at sodales. Nulla facilisi. Vestibulum in elit at diam consequat hendrerit eget ac ex. Donec consequat suscipit lectus nec laoreet. Duis molestie nisi at ultricies auctor. Mauris suscipit, nisl volutpat aliquet rutrum, libero quam facilisis leo, eget auctor turpis est eu neque. In quis lacinia lacus, eu tincidunt massa. Proin vestibulum, mi quis tincidunt pharetra, dui ipsum iaculis risus, non sollicitudin libero metus eget nulla. Integer sodales quis sem ullamcorper fringilla. Ut interdum enim elementum, volutpat lacus at, pellentesque lectus.</TextBlock>
+                <TextBlock Width="500px" TextWrapping="Wrap" HorizontalAlignment="Left">Curabitur ornare viverra ex vitae pulvinar. Ut facilisis tellus at bibendum porttitor. Praesent eget ligula sed libero suscipit facilisis. Nunc malesuada egestas sollicitudin. Cras lectus magna, commodo ultrices aliquet fringilla, consequat non diam. Aliquam erat volutpat. Donec eu vestibulum felis. Quisque ut auctor nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla, sapien et maximus finibus, nisi massa placerat magna, id placerat erat nibh ac libero. Cras gravida lacus ac sapien interdum sodales. Nullam egestas lectus vitae justo fermentum mollis. Nunc euismod hendrerit mollis.Nulla purus magna, sodales vitae augue at, dignissim ornare dolor. Vivamus tellus magna, dapibus non finibus suscipit, rhoncus sit amet tellus. Sed interdum tincidunt lacus in porta. Sed a augue eu purus volutpat tempus eu et lacus. Pellentesque faucibus metus non sem aliquam, nec semper odio molestie. In dapibus ligula finibus eleifend posuere. Cras ullamcorper odio sapien, eget dictum dolor tincidunt molestie. Curabitur nec lectus id enim ullamcorper volutpat et quis velit.</TextBlock>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                    <Rectangle Width="150px" Height="150px" Fill="Blue" />
+                    <StackPanel Orientation="Vertical">
+                        <Rectangle Width="150px" Height="75px" Fill="Red" />
+                        <Rectangle Width="150px" Height="75px" Fill="Yellow"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>-->
+
+        <!--<RelativePanel MinHeight="300">
+            <Rectangle Width="100" Height="100" Fill="Red" Name="rdeci" RelativePanel.AlignRightWithPanel="True"/>
+            <Rectangle Width="50" Height="50" Fill="Blue" Name="plavi" RelativePanel.LeftOf="rdeci"/>
+            --><!-- zelen poravnan navpični centr z rdečim vodoravni pa z panelom--><!--
+            <Rectangle Width="50" Height="50" Fill="Green" Name="zeleni" RelativePanel.AlignVerticalCenterWith="rdeci" RelativePanel.AlignHorizontalCenterWithPanel="True" />
+            <Rectangle MinWidth="50" Height="50" Fill="Purple" Name="vijola" RelativePanel.Below="rdeci" RelativePanel.AlignRightWith="rdeci" RelativePanel.AlignLeftWith="zeleni"/>
+        </RelativePanel>-->
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <Button Name="btnIsci" Content="Išči" RelativePanel.AlignRightWithPanel="True" Margin="0,0,10,0" />
+            <TextBox Name="txtNiz" RelativePanel.LeftOf="btnIsci" Width="100" Margin="0,0,10,0" />
+            <TextBlock Text="Iskanje:" RelativePanel.LeftOf="txtNiz" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,10,0" />
+            <TextBlock Text="Naslov" FontSize="24" FontWeight="Bold"/>
+        </RelativePanel>        <StackPanel Grid.Row="1">            <SplitView Name="mySplitView" CompactPaneLength="10" OpenPaneLength="50" DisplayMode="Inline">
+                <SplitView.Pane>
+                    <StackPanel>
+                        <TextBlock Text="prvi"/>
+                        <TextBlock Text="drugi"/>
+                        <TextBlock Text="tretji"/>
+                    </StackPanel>
+                </SplitView.Pane>
+                <SplitView.Content>
+                    <StackPanel>
+                        <TextBlock Text="četrti"/>
+                        <TextBlock Text="peti"/>
+                        <TextBlock Text="šesti"/>
+                    </StackPanel>
+                </SplitView.Content>
+            </SplitView>
+            <Button Content="Klikni me" Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Page>

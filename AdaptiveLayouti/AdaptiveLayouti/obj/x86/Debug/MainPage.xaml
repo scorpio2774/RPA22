@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="AdaptiveLayouti.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AdaptiveLayouti"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:ConnectionId='2' x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:ConnectionId='3' Name="first" Margin="20,20,0,0">
+            <Image Source="/Assets/Tibbles.jpg" HorizontalAlignment="Left"/>
+            <TextBlock>To je mr. Tibbles</TextBlock>
+        </StackPanel>
+        <StackPanel x:ConnectionId='4' Name="second" Margin="20,20,0,0">
+            <TextBlock TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non maximus risus. Integer vehicula facilisis justo, vel pharetra sem tristique eu. Integer dapibus varius massa, sed dapibus ante tincidunt eget. Fusce sit amet convallis turpis. Donec dui nibh, vehicula vitae placerat id, ornare et leo. Sed eget mi velit. Aenean hendrerit dictum mi. Nulla varius elementum risus a ultrices. Fusce varius facilisis efficitur. Nullam facilisis cursus diam ut blandit. Cras feugiat eros eu eros maximus porttitor. In sed massa convallis, ornare augue id, porttitor massa. Nunc sed augue purus. Suspendisse sit amet arcu quis ex eleifend imperdiet at quis elit. Pellentesque suscipit enim rhoncus, laoreet augue viverra, ultricies ante. Duis quis urna varius tortor tristique congue in sit amet leo.</TextBlock>
+        </StackPanel>
+        <StackPanel x:ConnectionId='5' Name="third" Margin="20,20,0,0">
+            <TextBlock TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non maximus risus. Integer vehicula facilisis justo, vel pharetra sem tristique eu. Integer dapibus varius massa, sed dapibus ante tincidunt eget. Fusce sit amet convallis turpis. Donec dui nibh, vehicula vitae placerat id, ornare et leo. Sed eget mi velit. Aenean hendrerit dictum mi. Nulla varius elementum risus a ultrices. Fusce varius facilisis efficitur. Nullam facilisis cursus diam ut blandit. Cras feugiat eros eu eros maximus porttitor. In sed massa convallis, ornare augue id, porttitor massa. Nunc sed augue purus. Suspendisse sit amet arcu quis ex eleifend imperdiet at quis elit. Pellentesque suscipit enim rhoncus, laoreet augue viverra, ultricies ante. Duis quis urna varius tortor tristique congue in sit amet leo.</TextBlock>
+        </StackPanel>
+            <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:ConnectionId='6' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='7' x:Name="telefon">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" MinWindowHeight="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="first.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="second.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="third.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="first.(Grid.Row)" Value="0"/>
+                        <Setter Target="second.(Grid.Row)" Value="1"/>
+                        <Setter Target="third.(Grid.Row)" Value="2"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:ConnectionId='8' x:Name="tablica">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="750" MinWindowHeight="-1"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="first.(Grid.RowSpan)" Value="3"/>
+                        <Setter Target="second.(Grid.RowSpan)" Value="3"/>
+                        <Setter Target="third.(Grid.RowSpan)" Value="3"/>
+                        <Setter Target="first.(Grid.Column)" Value="0"/>
+                        <Setter Target="second.(Grid.Column)" Value="1"/>
+                        <Setter Target="third.(Grid.Column)" Value="2"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+    </Grid>
+</Page>
+

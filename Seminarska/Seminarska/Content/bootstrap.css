@@ -3688,9 +3688,10 @@ fieldset:disabled .btn {
   opacity: 0;
 }
 
-.collapse:not(.show) {
+.collapse:not(.in) {
   display: none;
 }
+
 
 .collapsing {
   height: 0;

@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<Seminarska.Models.PlanDejavnosti>
 
-@{
-    ViewBag.Title = "Index";
-}
+@{ ViewBag.Title = "Plan dejavnosti"; }
 
-<h2>Index</h2>
+<h2>Plan dejavnosti</h2>
 
 <p>
     @Html.ActionLink("Nova dejavnost", "Create")
@@ -29,29 +27,29 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlaOpis)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlaŠtDijakov)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlaCilji)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlaTrajanje)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Področja.PodIme)
-        </td>
-        <td>
-            @Html.ActionLink("Uredi", "Edit", new { id=item.PlaId }) |
-            @Html.ActionLink("Podrobnosti", "Details", new { id=item.PlaId }) |
-            @Html.ActionLink("Izbriši", "Delete", new { id=item.PlaId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.PlaOpis)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PlaŠtDijakov)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PlaCilji)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PlaTrajanje)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Področja.PodIme)
+    </td>
+    <td>
+        @Html.ActionLink("Uredi", "Edit", new { id = item.PlaId }) |
+        @Html.ActionLink("Podrobnosti", "Details", new { id = item.PlaId }) |
+        @Html.ActionLink("Izbriši", "Delete", new { id = item.PlaId })
+    </td>
+</tr>}
 
 </table>

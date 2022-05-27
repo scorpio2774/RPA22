@@ -23,6 +23,8 @@ namespace Seminarska
             var j = config.Formatters.JsonFormatter;
             j.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
 
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+
         }
     }
 }
