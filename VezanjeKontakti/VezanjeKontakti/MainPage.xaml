@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="VezanjeKontakti.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VezanjeKontakti"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Ime" HorizontalAlignment="Left" Grid.Column="0" Margin="10,10,0,0"/>
+        <TextBox Name="txtIme" Margin="10,10,0,0" Width="400" Grid.Column="1"/>
+        <TextBlock Text="Priimek" HorizontalAlignment="Left" Grid.Row="1" Margin="10,10,0,0"/>
+        <TextBox Name="txtPriimek" Margin="10,10,0,0" Width="400" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock Text="Avatar" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2"/>
+        <ComboBox ItemsSource="{x:Bind ikone}" Name="cboAvatar" Margin="10,10,0,0" Grid.Row="2" Grid.Column="1">
+            <ComboBox.ItemTemplate>
+                <DataTemplate x:DataType="local:Icon">
+                    <Image Source="{x:Bind Ikonapot}" Width="40" Height="40"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Grid.Row="3" Content="Add" Margin="10,10,0,0" Click="Button_Click"/>
+        <GridView Grid.Row="4" Grid.ColumnSpan="2" ItemsSource="{x:Bind Stiki}">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Contact">
+                    <StackPanel HorizontalAlignment="Center" Margin="10">
+                        <Image Source="{x:Bind AvatarPot}" Width="100" Height="100"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                            <TextBlock Text="{x:Bind Ime}" Margin="0,0,5,0"/>
+                            <TextBlock Text="{x:Bind Priimek}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>
