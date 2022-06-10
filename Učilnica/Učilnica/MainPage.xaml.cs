@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +23,54 @@ namespace Učilnica
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public ObservableCollection<Poglavja> VsaPoglavja { get; set; }
+        public ObservableCollection<Module> Vsebina { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
+            VsaPoglavja = new ObservableCollection<Poglavja>();
+            Vsebina = new ObservableCollection<Module>();
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            mojP.IsActive = true;
+            mojP.Visibility = Visibility.Visible;
+            await KlicServisa.PopulatePoglavjaAsync(VsaPoglavja);
+            mojP.IsActive = false;
+            mojP.Visibility = Visibility.Collapsed;
+            masterListView.SelectedIndex = 0;
+            var selectedPoglavje = VsaPoglavja.FirstOrDefault();
+            Vsebina = selectedPoglavje.modules;
+            //ne pozabi spremeniti item source!!
+            detailListView.ItemsSource = null;
+            detailListView.ItemsSource = Vsebina;
+        }
+
+        private void masterListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var selectedPoglavje =(Poglavja) e.ClickedItem;
+            Vsebina = selectedPoglavje.modules;
+            //ne pozabi spremeniti item source!!
+            detailListView.ItemsSource = null;
+            detailListView.ItemsSource = Vsebina;
+        }
+
+        private async void detailListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var selectedModule = (Module)e.ClickedItem;
+            if (selectedModule.modname == "resource")
+            {
+                var vesContent = selectedModule.contents;
+                Content a = vesContent.FirstOrDefault();
+                string[] izbrana = a.fileurl.Split("?");
+                int dolzina = a.filesize;
+                var y = await KlicServisa.PoberiDatoteko(izbrana[0], dolzina, a.filename);
+                if (y != null)
+                {
+                    var uspeh = await Windows.System.Launcher.LaunchFileAsync(y);
+                }
+            }
         }
     }
 }
