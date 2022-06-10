@@ -43,3 +43,8 @@ D:\RPA22\Učilnica\Učilnica\obj\x86\Debug\qualifiers.txt.intermediate
 D:\RPA22\Učilnica\Učilnica\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\RPA22\Učilnica\Učilnica\obj\x86\Debug\ProjectArchitectures.txt
 D:\RPA22\Učilnica\Učilnica\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424743200000000.json
+D:\RPA22\Učilnica\Učilnica\bin\x86\Debug\System.Net.Http.Formatting.dll
+D:\RPA22\Učilnica\Učilnica\bin\x86\Debug\Newtonsoft.Json.dll
+D:\RPA22\Učilnica\Učilnica\bin\x86\Debug\Newtonsoft.Json.Bson.dll
+D:\RPA22\Učilnica\Učilnica\obj\x86\Debug\System.Net.Http.Formatting\en-US\System.Net.Http.Properties.CommonWebApiResources.resw
+D:\RPA22\Učilnica\Učilnica\obj\x86\Debug\System.Net.Http.Formatting\en-US\System.Net.Http.Properties.Resources.resw
